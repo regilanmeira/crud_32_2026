@@ -1,0 +1,158 @@
+/* ==========================================
+   RESET BÁSICO E CONFIGURAÇÕES GERAIS
+   ========================================== */
+
+/* 
+ * Correção importante: no código original havia um caractere '-' antes do bloco. 
+ * O seletor universal correto é o asterisco (*), que aplica a regra a todos os elementos da página.
+ */
+* {
+    /* Define que padding e border não aumentam a largura total declarada dos elementos */
+    box-sizing: border-box;
+    /* Remove as margens internas e externas padrão dos navegadores */
+    margin: 0;
+    padding: 0;
+    /* Define a família tipográfica padrão (com fallbacks) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Cor de fundo suave (cinza claro com tom levemente frio) */
+    background-color: #f4f7f6;
+    /* Cor principal do texto para garantir bom contraste (cinza escuro) */
+    color: #333;
+    /* Melhora a legibilidade do texto ajustando o espaçamento entre linhas */
+    line-height: 1.6;
+    /* Adiciona um respiro de 20px ao redor da página */
+    padding: 20px;
+}
+
+/* ==========================================
+   ESTILIZAÇÃO DE TEXTOS E LINKS
+   ========================================== */
+
+/* Define a cor e o espaçamento inferior padrão para os títulos principais */
+h1, h2, h3 {
+    color: #2c3e50; /* Azul escuro corporativo */
+    margin-bottom: 20px;
+}
+
+/* Links em seu estado normal */
+a {
+    color: #3498db; /* Azul chamativo */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    transition: color 0.2s; /* Transição suave para a troca de cor no hover */
+}
+
+/* Efeito ao passar o ponteiro do mouse sobre os links */
+a:hover {
+    color: #2980b9; /* Azul um pouco mais escuro */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* ==========================================
+   ESTILIZAÇÃO GERAL DE FORMULÁRIOS
+   ========================================== */
+
+/* Estilização do contêiner do formulário */
+form {
+    background: #ffffff; /* Fundo branco para destacar do body */
+    padding: 25px; /* Espaço interno para afastar os campos da borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar efeito de elevação */
+    max-width: 600px; /* Largura máxima para manter boa usabilidade */
+    margin: 20px 0; /* Espaçamento externo em relação a outros elementos */
+}
+
+/* Rótulos dos campos */
+label {
+    display: block; /* Ocupa a linha inteira, forçando o campo a ficar abaixo */
+    margin-bottom: 8px; /* Distância entre o rótulo e o campo */
+    font-weight: 600; /* Texto em negrito suave */
+    color: #444; /* Cor cinza escuro */
+}
+
+/* Estilização padronizada para diferentes tipos de inputs, textareas e seletores */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+textarea,
+select {
+    width: 100%; /* Ocupa 100% da largura do formulário */
+    padding: 10px 12px; /* Espaçamento interno para digitação confortável */
+    margin-bottom: 18px; /* Distância entre os campos consecutiva */
+    border: 1px solid #ccc; /* Borda cinza suave */
+    border-radius: 4px; /* Bordas levemente arredondadas */
+    font-size: 14px;
+    /* Suaviza as mudanças na cor da borda e sombra */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Efeito quando o usuário clica ou foca em um campo */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #3498db; /* Altera a borda para azul */
+    outline: none; /* Remove o contorno padrão do navegador */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3); /* Adiciona um brilho azul ao redor */
+}
+
+/* ==========================================
+   ESTILIZAÇÃO DOS BOTÕES
+   ========================================== */
+
+/* Estilos de botões principais e de ação */
+input[type="submit"],
+input[type="reset"],
+button {
+    background-color: #2ecc71; /* Verde chamativo para ação positiva */
+    color: white; /* Texto em branco */
+    padding: 10px 20px; /* Tamanho do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Arredondamento */
+    cursor: pointer; /* Transforma o cursor na mãozinha indicando clique */
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s; /* Transição suave na mudança de cor */
+}
+
+/* Efeito de hover nos botões de envio e genéricos */
+input[type="submit"]:hover,
+button:hover {
+    background-color: #27ae60; /* Verde ligeiramente mais escuro */
+}
+
+/* ==========================================
+   ESTILIZAÇÃO DE TABELAS
+   ========================================== */
+
+table {
+    width: 100%; /* Ocupa toda a largura disponível */
+    border-collapse: collapse; /* Une as bordas das células sem espaço entre elas */
+    background: #ffffff;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra muito suave */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o fundo das células respeite o border-radius da tabela */
+}
+
+/* Células de cabeçalho e de dados */
+th, td {
+    padding: 12px 15px; /* Espaçamento interno das células */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    border-bottom: 1px solid #eee; /* Linha divisória suave entre as linhas */
+}
+
+/* Cabeçalho da tabela */
+th {
+    background-color: #34495e; /* Azul/Cinza escuro */
+    color: #ffffff; /* Texto em branco */
+    font-weight: 600;
+}
+
+/* Efeito ao passar o mouse sobre as linhas da tabela */
+tr:hover {
+    background-color: #f8f9fa; /* Destaca levemente a linha sob o cursor */
+}
